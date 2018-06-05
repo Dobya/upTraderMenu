@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load draw_menu %}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="UTF-8">
+    <title>{{request.path}}</title>
+</head>
+
+<body>
+    <div>
+    {% draw_menu "first" %}
+    {% draw_menu "second" %}
+    </div>
+</body>
+</html>

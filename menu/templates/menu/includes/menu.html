@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .menu-item {
+            display: inline-block;
+            align: center;
+            margin: 1%
+        }
+        .menu-level {
+            align: center;
+            margin-bottom: 2%;
+        }
+        .menu {
+            display: inline-block;
+            align: center;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+    {% for level in menu %}
+        <div class="menu-level">
+        {% for item in level %}
+            <div class="menu-item">
+                {% include 'menu/includes/menu_button.html' %}
+            </div>
+        {% endfor %}
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>

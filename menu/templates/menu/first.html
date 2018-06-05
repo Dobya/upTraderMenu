@@ -1,0 +1,9 @@
+{% extends 'menu/main_page.html' %}
+
+{% block menu %}
+    <div align="center">
+        {% for menu in items %}
+            {% include 'menu/includes/menu_button.html' %}
+        {% endfor %}
+    </div>
+{% endblock %}

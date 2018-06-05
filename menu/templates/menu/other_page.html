@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="UTF-8">
+    <title>{{request.path}}</title>
+    <style type="text/css">
+        .menu {
+            display: inline-block;
+            align: center;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    {% for menu in menus %}
+        <div class="menu">
+            {% include 'menu/includes/menu_button.html' %}
+        </div>
+    {% endfor %}
+</body>
+</html>
